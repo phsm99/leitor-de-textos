@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title>Leitor de textos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="http://d1ujqdpfgkvqfi.cloudfront.net/favicon-generator/htdocs/favicons/2014-12-28/f4a383c16c5be5311ef0bff132f1e2d5.ico">
+</head>
+
+<body style="display: flex; justify-content: center; ">
+
+    <div class="mt-3">
+        <div style="display: flex; justify-content: center;"> 
+            <button onclick="speak()" class="p-4 bg-purple-700 text-white rounded shadow">Iniciar</button>
+            <button onclick="pause()" class="p-4 ml-2 bg-purple-700 text-white rounded shadow">Pausar</button>
+            <button onclick="resume()" class="p-4 ml-2 bg-purple-700 text-white rounded shadow">Retomar</button>
+            <button onclick="stop()" class="p-4 ml-2 bg-purple-700 text-white rounded shadow">Parar</button>
+        </div>
+        <div style="display: flex; justify-content: center;margin-top: 10px;">
+            <label for="rangeRate">Velocidade: </label>
+            <input id="rangeRate" style="margin-left: 5px;" min="1" max="10" value="1" oninput="setRate(event)" type="range"></button>
+            <span style="margin-left: 5px;" id="rangeRateText">1</span>
+        </div>
+
+        <div style="margin-top: 20px; display: flex; justify-content: center;">
+            <textarea id="text"  style="width:1000px; height: 200px; padding: 10px;min-height: 50px;border: #6b46c1 solid 2px;" class="border border-purple "></textarea>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
